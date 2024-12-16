@@ -30,6 +30,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@vitejs/plugin-vue", "virtual:2094c647d5cad956eadee8d50935ad7474a2a4f7c010accb5ae2394fcfe83aecb640f929a63c94ff09ad8c8a1d0352f10cc79fda3bb832cd2e8ce7e9a80570c1#npm:4.0.0"],\
             ["autoprefixer", "virtual:2094c647d5cad956eadee8d50935ad7474a2a4f7c010accb5ae2394fcfe83aecb640f929a63c94ff09ad8c8a1d0352f10cc79fda3bb832cd2e8ce7e9a80570c1#npm:10.4.13"],\
+            ["i18next", "npm:23.3.0"],\
+            ["i18next-browser-languagedetector", "npm:7.1.0"],\
+            ["i18next-vue", "virtual:2094c647d5cad956eadee8d50935ad7474a2a4f7c010accb5ae2394fcfe83aecb640f929a63c94ff09ad8c8a1d0352f10cc79fda3bb832cd2e8ce7e9a80570c1#npm:2.2.1"],\
             ["postcss", "npm:8.4.21"],\
             ["tailwindcss", "virtual:2094c647d5cad956eadee8d50935ad7474a2a4f7c010accb5ae2394fcfe83aecb640f929a63c94ff09ad8c8a1d0352f10cc79fda3bb832cd2e8ce7e9a80570c1#npm:3.2.7"],\
             ["vite", "virtual:2094c647d5cad956eadee8d50935ad7474a2a4f7c010accb5ae2394fcfe83aecb640f929a63c94ff09ad8c8a1d0352f10cc79fda3bb832cd2e8ce7e9a80570c1#npm:4.0.4"],\
@@ -62,6 +65,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@babel/parser", "npm:7.20.13"],\
             ["@babel/types", "npm:7.20.7"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@babel/runtime", [\
+        ["npm:7.22.6", {\
+          "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.22.6-493f6b7ad0-e585338287.zip/node_modules/@babel/runtime/",\
+          "packageDependencies": [\
+            ["@babel/runtime", "npm:7.22.6"],\
+            ["regenerator-runtime", "npm:0.13.11"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1238,6 +1251,52 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["i18next", [\
+        ["npm:23.3.0", {\
+          "packageLocation": "./.yarn/cache/i18next-npm-23.3.0-5a6e5143df-4f9d135b0b.zip/node_modules/i18next/",\
+          "packageDependencies": [\
+            ["i18next", "npm:23.3.0"],\
+            ["@babel/runtime", "npm:7.22.6"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["i18next-browser-languagedetector", [\
+        ["npm:7.1.0", {\
+          "packageLocation": "./.yarn/cache/i18next-browser-languagedetector-npm-7.1.0-1a79fe5d7c-36981b9a99.zip/node_modules/i18next-browser-languagedetector/",\
+          "packageDependencies": [\
+            ["i18next-browser-languagedetector", "npm:7.1.0"],\
+            ["@babel/runtime", "npm:7.22.6"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["i18next-vue", [\
+        ["npm:2.2.1", {\
+          "packageLocation": "./.yarn/cache/i18next-vue-npm-2.2.1-d65fa48ccc-a1ee564050.zip/node_modules/i18next-vue/",\
+          "packageDependencies": [\
+            ["i18next-vue", "npm:2.2.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:2094c647d5cad956eadee8d50935ad7474a2a4f7c010accb5ae2394fcfe83aecb640f929a63c94ff09ad8c8a1d0352f10cc79fda3bb832cd2e8ce7e9a80570c1#npm:2.2.1", {\
+          "packageLocation": "./.yarn/__virtual__/i18next-vue-virtual-296d93ce66/0/cache/i18next-vue-npm-2.2.1-d65fa48ccc-a1ee564050.zip/node_modules/i18next-vue/",\
+          "packageDependencies": [\
+            ["i18next-vue", "virtual:2094c647d5cad956eadee8d50935ad7474a2a4f7c010accb5ae2394fcfe83aecb640f929a63c94ff09ad8c8a1d0352f10cc79fda3bb832cd2e8ce7e9a80570c1#npm:2.2.1"],\
+            ["@types/i18next", null],\
+            ["@types/vue", null],\
+            ["i18next", "npm:23.3.0"],\
+            ["vue", "npm:3.2.45"]\
+          ],\
+          "packagePeers": [\
+            "@types/i18next",\
+            "@types/vue",\
+            "i18next",\
+            "vue"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["iconv-lite", [\
         ["npm:0.6.3", {\
           "packageLocation": "./.yarn/cache/iconv-lite-npm-0.6.3-24b8aae27e-3f60d47a5c.zip/node_modules/iconv-lite/",\
@@ -1762,6 +1821,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["portifolio", "workspace:."],\
             ["@vitejs/plugin-vue", "virtual:2094c647d5cad956eadee8d50935ad7474a2a4f7c010accb5ae2394fcfe83aecb640f929a63c94ff09ad8c8a1d0352f10cc79fda3bb832cd2e8ce7e9a80570c1#npm:4.0.0"],\
             ["autoprefixer", "virtual:2094c647d5cad956eadee8d50935ad7474a2a4f7c010accb5ae2394fcfe83aecb640f929a63c94ff09ad8c8a1d0352f10cc79fda3bb832cd2e8ce7e9a80570c1#npm:10.4.13"],\
+            ["i18next", "npm:23.3.0"],\
+            ["i18next-browser-languagedetector", "npm:7.1.0"],\
+            ["i18next-vue", "virtual:2094c647d5cad956eadee8d50935ad7474a2a4f7c010accb5ae2394fcfe83aecb640f929a63c94ff09ad8c8a1d0352f10cc79fda3bb832cd2e8ce7e9a80570c1#npm:2.2.1"],\
             ["postcss", "npm:8.4.21"],\
             ["tailwindcss", "virtual:2094c647d5cad956eadee8d50935ad7474a2a4f7c010accb5ae2394fcfe83aecb640f929a63c94ff09ad8c8a1d0352f10cc79fda3bb832cd2e8ce7e9a80570c1#npm:3.2.7"],\
             ["vite", "virtual:2094c647d5cad956eadee8d50935ad7474a2a4f7c010accb5ae2394fcfe83aecb640f929a63c94ff09ad8c8a1d0352f10cc79fda3bb832cd2e8ce7e9a80570c1#npm:4.0.4"],\
@@ -1980,6 +2042,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["readdirp", "npm:3.6.0"],\
             ["picomatch", "npm:2.3.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["regenerator-runtime", [\
+        ["npm:0.13.11", {\
+          "packageLocation": "./.yarn/cache/regenerator-runtime-npm-0.13.11-90bf536060-27481628d2.zip/node_modules/regenerator-runtime/",\
+          "packageDependencies": [\
+            ["regenerator-runtime", "npm:0.13.11"]\
           ],\
           "linkType": "HARD"\
         }]\
