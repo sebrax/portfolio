@@ -28,6 +28,10 @@
   border: 1px solid #111;
 }
 
+p, ul {
+  font-size: 20px;
+}
+
 .v-enter-from,
 .v-leave-to {
   opacity: 0;

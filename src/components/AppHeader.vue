@@ -1,10 +1,24 @@
 <script setup>
+  import { ref } from 'vue'
   import CtaButton from './CtaButton.vue'
+  const avatar = ref(null)
 
-  /* window.addEventListener('scroll', e => {
-	const avatar = document.getElementById('avatar')
-	const currentPosition = avatar.getBoundingClientRect().x
-}) */
+  const isInView = (element) => {
+    const elementTop = element.offsetTop
+    const elementBottom = elementTop + element.offsetHeight
+    const viewportTop = window.scrollY
+    const viewportBottom = viewportTop + window.innerHeight
+
+    return elementBottom > viewportTop && elementTop < viewportBottom
+  }
+
+  window.addEventListener('scroll', () => {
+    const el = avatar.value
+    if (el instanceof HTMLElement && isInView(el)) {
+      let position = Math.sqrt(el.getBoundingClientRect().y)
+      el.style.transform = `rotate(${position++}deg)`
+    }
+  })
 </script>
 
 <template>
@@ -24,29 +38,9 @@
       </div>
     </div>
     <img
-      id="avatar"
-      class="w-40 md:w-48 lg:w-auto lg:max-w-xs absolute left-0 lg:left-auto lg:right-10 -bottom-1"
+      ref="avatar"
+      class="avatar w-40 md:w-48 lg:w-auto lg:max-w-xs absolute left-0 lg:left-auto lg:right-10 -bottom-1"
       src="/eu2.webp"
       alt="Avatar Sulivan" />
   </header>
 </template>
-
-<style scoped>
-  @keyframes avatarAnimate {
-    from {
-      transform: translate(0px) scale(.9);
-    }
-    to {
-      transform: translate(-10%) rotateZ(30deg) scale(1.2);
-    }
-  }
-  @media (prefers-reduced-motion: no-preference) {
-    @supports (animation-timeline: scroll()) {
-      #avatar {
-        animation: avatarAnimate linear both;
-        animation-timeline: view();
-        animation-range: contain;
-      }
-    }
-  }
-</style>

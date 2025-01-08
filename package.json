@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@lottiefiles/dotlottie-vue": "^0.5.3",
     "i18next": "^23.3.0",
     "i18next-browser-languagedetector": "^7.1.0",
     "i18next-vue": "^2.2.1",
