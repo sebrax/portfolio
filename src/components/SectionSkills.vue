@@ -22,10 +22,10 @@
     'devicon-docker-plain-wordmark',
   ])
 
-  const iconSets = [
-    [...icons.value.slice(0, icons.value.length / 2)],
-    [...icons.value.slice(icons.value.length / 2)]
-]
+  const iconSets = {
+    left: [...icons.value.slice(0, icons.value.length / 2)],
+    right: [...icons.value.slice(icons.value.length / 2)]
+  }
 
 </script>
 
@@ -37,9 +37,9 @@
       <div class="grid grid-cols-1 lg:grid-cols-3">
         <div class="techs grid grid-cols-3 gap-10">
           <i
-            v-for="icon in iconSets[0]"
+            v-for="icon in iconSets.left"
             :class="icon"
-            class="tech-icon"></i>
+            class="tech-icon odd:border"></i>
         </div>
         <img
           src="/meditando.webp"
@@ -47,9 +47,9 @@
           class="avatar-meditation" />
         <div class="techs grid grid-cols-3 gap-10">
           <i
-            v-for="icon in iconSets[1]"
+            v-for="icon in iconSets.right"
             :class="icon"
-            class="tech-icon"></i>
+            class="tech-icon even:border"></i>
         </div>
       </div>
     </div>
@@ -70,11 +70,11 @@
   }
 
   .tech-icon {
-    @apply text-8xl origin-center text-center align-middle flex justify-center items-center rounded-lg;
+    @apply text-8xl origin-center text-center align-middle flex justify-center items-center rounded-lg border-neutral-700;
   }
-  
+
   .tech-icon:hover {
-    @apply transition ease-in bg-indigo-700 text-white;
+    @apply transition ease-out bg-indigo-700 text-white;
   }
 
   .avatar-meditation {

@@ -1,7 +1,7 @@
 <script setup>
   import { ref } from 'vue'
   import CtaButton from './CtaButton.vue'
-  const avatar = ref(null)
+  import Avatar from './IntroAvatar.vue'
 
   const isInView = (element) => {
     const elementTop = element.offsetTop
@@ -37,10 +37,11 @@
         <CtaButton :msg="$t('cta2')" :external="true" />
       </div>
     </div>
-    <img
+    <!-- <img
       ref="avatar"
       class="avatar w-40 md:w-48 lg:w-auto lg:max-w-xs absolute left-0 lg:left-auto lg:right-10 -bottom-1"
       src="/eu2.webp"
-      alt="Avatar Sulivan" />
+      alt="Avatar Sulivan" /> -->
+    <Avatar ref="avatar" class="avatar w-40 md:w-48 lg:w-auto lg:max-w-xs absolute left-0 lg:left-auto lg:right-10 -bottom-1" />
   </header>
 </template>
