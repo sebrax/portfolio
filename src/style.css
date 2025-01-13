@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "NewYork";
-  src: url('./assets/NewYork.otf');
-}
-
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
@@ -26,10 +21,6 @@
 *::-webkit-scrollbar-thumb {
   background-color: #fff;
   border: 1px solid #111;
-}
-
-p, ul {
-  font-size: 20px;
 }
 
 .v-enter-from,

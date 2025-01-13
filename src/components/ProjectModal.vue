@@ -3,11 +3,11 @@
 		<div
 			v-if="show"
 			id="modal"
-			class="z-50 fixed inset-0 bg-gray-600/70 overflow-y-auto w-full h-full"
+			class="z-50 fixed inset-0 bg-gray-600/70 w-full h-full"
 			@click.self="closeModal()"
 		>
 			<div
-				class="modal-container relative top-0 left-0 p-5 w-3/5 h-full shadow-lg rounded-r-2xl bg-white overflow-hidden"
+				class="modal-container relative top-0 left-0 p-10 w-3/5 h-full shadow-lg rounded-r-2xl bg-white overflow-y-auto"
 			>
 				<a
 					href="#"
@@ -16,24 +16,29 @@
 					@click.prevent="closeModal()"
 				></a>
 
-				<div class="grid grid-cols-4 gap-3 h-full">
+				<div :class="{'grid grid-cols-4': !toggledThumb}" class="gap-3">
 					<Transition name="fade">
 						<figure
-							:class="{'col-span-2 overflow-hidden': toggledThumb, 'col-span-4 overflow-y-scroll max-w-3xl mx-auto': !toggledThumb}"
-							class="rounded-2xl shadow-xl aspect-video cursor-pointer w-full"
+							ref="thumb"
+							:class="toggledThumb ? 'inline-block float-start overflow-hidden max-w-72 mr-10 mb-5': 'col-span-4 overflow-y-scroll max-w-3xl mx-auto block w-full'"
+							class="rounded-2xl shadow-xl aspect-video cursor-pointer"
 							@click="toggledThumb = !toggledThumb"
 						>
 							<img :src="'/projects/' + project.thumbnail" :alt="project.title" class="w-full">
 						</figure>
 					</Transition>
 					<div
-						:class="{'col-span-2': toggledThumb, 'col-span-full': !toggledThumb}"
-						class="py-3 flex flex-col gap"
+						:class="toggledThumb ? 'inline': 'col-span-full flex'"
+						class="py-3 flex-col gap"
 					>
 						<h3 class="text-lg lg:text-3xl leading-6 font-bold">{{ project.name }}!</h3>
 						<p class="text-gray-500 space-x-1 mt-3">
 							<span v-for="category in project.categories" :key="category" class="px-2 py-1 rounded-sm bg-indigo-600 text-xs text-white leading-none">{{ category }}</span>
 						</p>
+						<article
+							class="text-base leading-normal space-y-5"
+							v-html="$t(project.slug, { ns: 'projects' })"
+						></article>
 					</div>
 				</div>
 			</div>
@@ -42,9 +47,7 @@
 </template>
 
 <script setup>
-import { onUpdated, inject, ref } from 'vue'
-
-const icons = inject('icons')
+import { onUpdated, ref } from 'vue'
 
 const props = defineProps({
 	project: Object,
@@ -72,7 +75,7 @@ document.body.addEventListener('keydown', e => {
 
 </script>
 
-<style>
+<style scoped>
 .modal-enter-from {
   opacity: 0;
 }

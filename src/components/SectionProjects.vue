@@ -34,47 +34,9 @@
 
 <script setup>
 import {ref} from 'vue'
-import ProjectModal from './ProjectModal.vue';
+import ProjectModal from './ProjectModal.vue'
+import { projects } from '../projects'
 
 const SelectedProject = ref({})
 const showModal = ref(false)
-
-const projects = ref([
-    {
-        name: 'Tuzzy E-Sports',
-        thumbnail: 'tuzzy.png',
-        url: 'https://tuzzy.gg',
-        categories: ['Institucional', 'E-Commerce']
-    },
-    {
-        name: 'Me Too Brasil',
-        thumbnail: 'metoobrasil.png',
-        url: 'https://metoobrasil.org.br',
-        categories: ['Institucional', 'E-Commerce']
-    },
-    {
-        name: 'RS Despachante',
-        thumbnail: 'rsdespachante.png',
-        url: 'https://rsdespachante.com.br',
-        categories: ['App Web', 'Institucional', 'Blog', 'Sistema interno']
-    },
-    {
-        name: 'Moldar Interiores',
-        thumbnail: 'moldarinteriores.png',
-        url: 'https://moldarinteriores.com.br',
-        categories: ['Portifolio']
-    },
-    {
-        name: 'Madeibra Marcenaria & Design',
-        thumbnail: 'madeibra.png',
-        url: 'https://madeibra.com.br',
-        categories: ['Institucional', 'Portifolio', 'E-Commerce']
-    },
-    {
-        name: 'Incentivesp',
-        thumbnail: 'incentive.png',
-        url: 'https://incentive.esp.br',
-        categories: ['App Web', 'Rede Social']
-    },
-])
 </script>

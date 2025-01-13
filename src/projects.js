@@ -1,0 +1,51 @@
+export const projects = [
+  {
+    slug: 'tuzzy',
+    name: 'Tuzzy E-Sports',
+    thumbnail: 'tuzzy.jpg',
+    url: 'https://tuzzy.gg',
+    categories: ['Institucional', 'E-Commerce'],
+  },
+  {
+    slug: 'metoobrasil',
+    name: 'Me Too Brasil',
+    thumbnail: 'metoobrasil.jpg',
+    url: 'https://metoobrasil.org.br',
+    categories: ['Institucional', 'Blog'],
+  },
+  {
+    slug: 'rsdespachante',
+    name: 'RS Despachante',
+    thumbnail: 'rsdespachante.jpg',
+    url: 'https://rsdespachante.com.br',
+    categories: ['App Web', 'Institucional', 'Blog', 'Sistema interno'],
+  },
+  {
+    slug: 'moldeinteriores',
+    name: 'Moldar Interiores',
+    thumbnail: 'moldarinteriores.jpg',
+    url: 'https://moldarinteriores.com.br',
+    categories: ['Portifolio'],
+  },
+  {
+    slug: 'madeibra',
+    name: 'Madeibra Marcenaria & Design',
+    thumbnail: 'madeibra.jpg',
+    url: 'https://madeibra.com.br',
+    categories: ['Institucional', 'Portifolio', 'E-Commerce'],
+  },
+  {
+    slug: 'jwnews',
+    name: 'JW News',
+    thumbnail: 'jwnews.jpg',
+    url: 'https://jwnews.com.br',
+    categories: ['Jornal', 'Blog'],
+  },
+  {
+    slug: 'incentivesp',
+    name: 'Incentivesp',
+    thumbnail: 'incentive.jpg',
+    url: 'https://incentive.esp.br',
+    categories: ['App Web', 'Rede Social'],
+  },
+]

@@ -5,42 +5,44 @@ function clamp(value, min, max) {
   return Math.max(min, Math.min(max, value))
 }
 
+function animateSVG (element, className, interval = 5000, disableTimer = 300) {
+  setInterval(() => {
+    const el = document.getElementById(element)
+    el.classList.add(className)
+    setTimeout(() => el.classList.remove(className), disableTimer)
+  }, interval)
+}
+
+function followingEyes() {
+  const svg = document.getElementById('avatar')
+  const eyeLeft = document.getElementById('eye-left')
+  const eyeRight = document.getElementById('eye-right')
+
+  document.addEventListener('mousemove', (event) => {
+    const rect = svg.getBoundingClientRect()
+    const x = event.clientX - rect.left
+    const y = event.clientY - rect.top
+
+    const eyeLeftX = clamp(173.18 + (x - 150) / 50, 160, 176)
+    const eyeLeftY = clamp(170 + (y - 200) / 50, 157, 182)
+    const eyeRightX = clamp(236.19 + (x - 150) / 50, 223, 239)
+    const eyeRightY = clamp(170 + (y - 200) / 50, 157, 182)
+
+    eyeLeft.setAttribute('transform', `translate(${eyeLeftX} ${eyeLeftY})`)
+    eyeRight.setAttribute('transform', `translate(${eyeRightX} ${eyeRightY})`)
+  })
+}
+
 onMounted(() => {
-    const svg = document.getElementById('avatar')
-    const eyeLeft = document.getElementById('eye-left')
-    const eyeRight = document.getElementById('eye-right')
-
-    document.addEventListener('mousemove', (event) => {
-      const rect = svg.getBoundingClientRect()
-      const x = event.clientX - rect.left
-      const y = event.clientY - rect.top
-
-      const eyeLeftX = clamp(173.18 + (x - 150) / 50, 160, 176)
-      const eyeLeftY = clamp(170 + (y - 200) / 50, 157, 182)
-      const eyeRightX = clamp(236.19 + (x - 150) / 50, 223, 239)
-      const eyeRightY = clamp(170 + (y - 200) / 50, 157, 182)
-
-      eyeLeft.setAttribute('transform', `translate(${eyeLeftX} ${eyeLeftY})`)
-      eyeRight.setAttribute('transform', `translate(${eyeRightX} ${eyeRightY})`)
-    })
-
-    setInterval(() => {
-      const eyes = document.getElementById('eyes')
-      eyes.classList.add('blink')
-      setTimeout(() => eyes.classList.remove('blink'), 300)
-    }, 5000)
+  followingEyes()
+  animateSVG('eyes', 'blink')
+  setTimeout(animateSVG('eyebrow-2', 'bounce', 10000, 2000), 5000)
 })
 
 </script>
 
 <template>
   <svg id="avatar" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 400" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
-    <defs>
-      <linearGradient id="untitled-s-rect1-fill" x1="0.5" y1="0" x2="0.5" y2="1" spreadMethod="pad" gradientUnits="objectBoundingBox" gradientTransform="translate(0 0)">
-        <stop id="untitled-s-rect1-fill-0" offset="0%" stop-color="rgba(255,255,255,0)"/>
-        <stop id="untitled-s-rect1-fill-1" offset="100%" stop-color="#010022" />
-      </linearGradient>
-    </defs>
     <g id="man-5" transform="translate(-54.720001 28.040016)">
       <g id="body">
         <path id="untitled-s-path1" d="M309.51,371.959984v-38.019984c-.087883-30.742353-24.987647-55.642117-55.73-55.73h-3.52c-11.045695,0-20-8.954305-20-20v-20.09h-51.2v20.09c0,11.045695-8.954305,20-20,20h-3.52c-30.707277.115184-55.570331,24.982703-55.68,55.69v38.059984Z" fill="#8f5e36"/>
@@ -90,10 +92,26 @@ onMounted(() => {
   }
 }
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  10%, 90% {
+    transform: translateY(-7px) rotate(-3deg);
+  }
+}
+
 .blink {
   transform-origin: center;
   animation: blink;
   animation-duration: .3s;
+  animation-timing-function: ease-in;
+}
+
+.bounce {
+  transform-origin: center;
+  animation: bounce;
+  animation-duration: 1.5s;
   animation-timing-function: ease-in;
 }
 </style>

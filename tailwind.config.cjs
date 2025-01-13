@@ -11,7 +11,6 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'serif': ['NewYork', ...defaultTheme.fontFamily.serif]
       }
     },
   },
