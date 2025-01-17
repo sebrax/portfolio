@@ -7,7 +7,7 @@
 			@click.self="closeModal()"
 		>
 			<div
-				class="modal-container relative top-0 left-0 p-10 w-3/5 h-full shadow-lg rounded-r-2xl bg-white overflow-y-auto"
+				class="modal-container absolute bottom-0 lg:top-0 left-0 p-10 lg:w-3/5 h-3/4 lg:h-full shadow-lg rounded-t-2xl lg:rounded-r-2xl bg-white overflow-y-auto"
 			>
 				<a
 					href="#"
@@ -16,11 +16,11 @@
 					@click.prevent="closeModal()"
 				></a>
 
-				<div :class="{'grid grid-cols-4': !toggledThumb}" class="gap-3">
+				<div class="grid lg:gap-3" :class="{'lg:grid-cols-4': !toggledThumb}">
 					<Transition name="fade">
 						<figure
 							ref="thumb"
-							:class="toggledThumb ? 'inline-block float-start overflow-hidden max-w-72 mr-10 mb-5': 'col-span-4 overflow-y-scroll max-w-3xl mx-auto block w-full'"
+							:class="toggledThumb ? 'inline-block float-start overflow-x-hidden lg:overflow-hidden lg:max-w-72 mr-10 lg:mb-5 w-full lg:w-auto': 'col-span-4 overflow-y-scroll max-w-3xl mx-auto block w-full'"
 							class="rounded-2xl shadow-xl aspect-video cursor-pointer"
 							@click="toggledThumb = !toggledThumb"
 						>
@@ -33,7 +33,7 @@
 					>
 						<h3 class="text-lg lg:text-3xl leading-6 font-bold">{{ project.name }}!</h3>
 						<p class="text-gray-500 space-x-1 mt-3">
-							<span v-for="category in project.categories" :key="category" class="px-2 py-1 rounded-sm bg-indigo-600 text-xs text-white leading-none">{{ category }}</span>
+							<span v-for="category in project.categories" :key="category" class="px-2 py-1 rounded-sm bg-indigo-600 text-xs text-white leading-none inline-block">{{ category }}</span>
 						</p>
 						<article
 							class="text-base leading-normal space-y-5"

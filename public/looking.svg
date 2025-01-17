@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224.55 152.09">
+  <g id="avatar" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+    <g id="man-5">
+      <g id="head">
+        <path d="M194.03,121.22c0-10.77-8.73-19.5-19.5-19.5s-19.5,8.73-19.5,19.5c0,2.3,.42,4.49,1.15,6.54h36.7c.73-2.05,1.15-4.24,1.15-6.54Z" fill="#8f5e36"/>
+        <path d="M69.53,121.22c0-10.77-8.73-19.5-19.5-19.5s-19.5,8.73-19.5,19.5c0,2.3,.42,4.49,1.15,6.54h36.7c.73-2.05,1.15-4.24,1.15-6.54Z" fill="#8f5e36"/>
+        <path d="M175.77,78.7c0-13.93-5.53-27.29-15.38-37.14-9.85-9.85-23.21-15.38-37.14-15.38h-21.94c-28.99,0-52.5,23.49-52.52,52.48v49.1h126.98v-49.06Z" fill="#8f5e36"/>
+        <path id="nose" d="M119.06,125.76c-1.42-2.36-3.95-3.83-6.71-3.88s-5.34,1.32-6.85,3.63" fill="none" stroke="#cf946d" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4"/>
+        <g id="eyes">
+          <ellipse id="eye-left" cx="80.78" cy="114.61" rx="6.88" ry="7.43"/>
+          <ellipse id="eye-right" cx="143.79" cy="114.61" rx="6.88" ry="7.43"/>
+        </g>
+        <g id="eyebrows">
+          <path id="eyebrow-2" d="M132.12,85.57c15.97-8.6,28,0,28,0" fill="none" stroke="#272727" stroke-linecap="round" stroke-miterlimit="10" stroke-width="12"/>
+          <path id="eyebrow-1" d="M97.12,85.57c-15.97-8.6-28,0-28,0" fill="none" stroke="#272727" stroke-linecap="round" stroke-miterlimit="10" stroke-width="12"/>
+        </g>
+        <g id="hair">
+          <path id="untitled-s-path6" d="M179.6,41.57c-.05-8.48-6.91-15.34-15.39-15.39-.38,0-.76,0-1.13,.06,.23-1.01,.35-2.04,.35-3.07-.04-7.72-6.28-13.96-14-14h-12.69c-.7,0-1.41,.07-2.1,.18C133.82,3.98,129.2,0,123.77,0h-12.63C74.57,.26,45.03,29.92,44.93,66.49v16.31h0v38.38h9.43v-4.3h0v-35.21c0-4.8,3.41-8.73,7.95-8.73v-20.41c5.09-5.56,12.27-8.73,19.8-8.75h60.38c7.53,.02,14.71,3.19,19.8,8.75v20.46c4.68,.15,8.36,4.05,8.25,8.73v39.46h9.06v-36.35h0V41.57Z" fill="#272727"/>
+          <line id="untitled-s-line5" x1="96.91" y1="30.84" x2="117.96" y2="9.8" fill="none" stroke="#68717d" stroke-linecap="round" stroke-miterlimit="10" stroke-width="6"/>
+          <line id="untitled-s-line6" x1="118.63" y1="33.72" x2="127.66" y2="24.7" fill="none" stroke="#68717d" stroke-linecap="round" stroke-miterlimit="10" stroke-width="6"/>
+        </g>
+      </g>
+    </g>
+    <g id="hands">
+      <g id="fingers-left">
+        <path id="finger-inside" d="M52.27,119.94c4.35,0,7.87,.31,7.87,5s0,27.14-7.87,27.14-7.87-22.45-7.87-27.14,3.52-5,7.87-5Z" fill="#754c24"/>
+        <path id="finger-inside-2" data-name="finger-inside" d="M37.57,118.17c4.35,0,7.87,.31,7.87,5s0,27.14-7.87,27.14-7.87-22.45-7.87-27.14,3.52-5,7.87-5Z" fill="#754c24"/>
+        <path id="finger-inside-3" data-name="finger-inside" d="M22.72,118.17c4.35,0,7.87,.31,7.87,5s0,27.14-7.87,27.14-7.87-22.45-7.87-27.14,3.52-5,7.87-5Z" fill="#754c24"/>
+        <path id="finger-inside-4" data-name="finger-inside" d="M7.87,119.94c4.35,0,7.87,.31,7.87,5s0,27.14-7.87,27.14S0,129.64,0,124.94s3.52-5,7.87-5Z" fill="#754c24"/>
+        <path id="finger-inside-5" data-name="finger-inside" d="M65.01,128.94c3.18,0,5.75-.22,5.75-3.66s-2.58-6.21-5.75-6.21-5.75,2.78-5.75,6.21,2.58,3.66,5.75,3.66Z" fill="#754c24"/>
+      </g>
+      <g id="fingers-right">
+        <path id="finger-inside-6" data-name="finger-inside" d="M172.28,119.94c-4.35,0-7.87,.31-7.87,5s0,27.14,7.87,27.14,7.87-22.45,7.87-27.14-3.52-5-7.87-5Z" fill="#754c24"/>
+        <path id="finger-inside-7" data-name="finger-inside" d="M186.98,118.17c-4.35,0-7.87,.31-7.87,5s0,27.14,7.87,27.14,7.87-22.45,7.87-27.14-3.52-5-7.87-5Z" fill="#754c24"/>
+        <path id="finger-inside-8" data-name="finger-inside" d="M201.83,118.17c-4.35,0-7.87,.31-7.87,5s0,27.14,7.87,27.14,7.87-22.45,7.87-27.14-3.52-5-7.87-5Z" fill="#754c24"/>
+        <path id="finger-inside-9" data-name="finger-inside" d="M216.68,119.94c-4.35,0-7.87,.31-7.87,5s0,27.14,7.87,27.14,7.87-22.45,7.87-27.14-3.52-5-7.87-5Z" fill="#754c24"/>
+        <path id="finger-inside-10" data-name="finger-inside" d="M159.54,128.94c-3.18,0-5.75-.22-5.75-3.66s2.58-6.21,5.75-6.21,5.75,2.78,5.75,6.21-2.58,3.66-5.75,3.66Z" fill="#754c24"/>
+      </g>
+    </g>
+  </g>
+</svg>

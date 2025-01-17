@@ -21,7 +21,7 @@ export const projects = [
     categories: ['App Web', 'Institucional', 'Blog', 'Sistema interno'],
   },
   {
-    slug: 'moldeinteriores',
+    slug: 'moldarinteriores',
     name: 'Moldar Interiores',
     thumbnail: 'moldarinteriores.jpg',
     url: 'https://moldarinteriores.com.br',

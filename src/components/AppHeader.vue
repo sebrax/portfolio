@@ -22,18 +22,18 @@
 
 <template>
   <header class="relative h-screen md:grid grid-cols-4 bg-cover md:px-10">
-    <div class="col-span-3 flex flex-col justify-center gap-16 p-10">
+    <div class="col-span-3 flex flex-col justify-center gap-16 pt-20 lg:pt-10 p-10">
       <span>
-        <p class="text-xl lg:text-3xl font-thin">{{ $t('welcome') }}</p>
-        <h1 class="text-4xl lg:text-7xl font-bold">Sulivan!</h1>
+        <p class="text-xl sm:text-3xl font-thin">{{ $t('welcome') }}</p>
+        <h1 class="text-4xl sm:text-7xl font-bold">Sulivan!</h1>
       </span>
       <p
         class="text-2xl lg:text-4xl font-thin dark:text-gray-300"
         v-html="$t('description')"></p>
 
       <div class="flex flex-col md:flex-row gap-3">
-        <CtaButton :msg="$t('cta1')" :filled="true" />
-        <CtaButton :msg="$t('cta2')" :external="true" />
+        <CtaButton :msg="$t('cta1')" :filled="true" url="#work" />
+        <CtaButton :msg="$t('cta2')" url="#contact" />
       </div>
     </div>
     <Avatar ref="avatar" class="avatar w-40 md:w-48 lg:w-auto lg:max-w-xs absolute left-0 lg:left-auto lg:right-10 -bottom-1" />
