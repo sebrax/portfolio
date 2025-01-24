@@ -20,8 +20,12 @@ defineProps({
     type: Boolean,
     required: false,
     default: false
+  },
+  icon: {
+    type: String,
+    required: false,
   }
-});
+})
 </script>
 
 <template>
@@ -37,8 +41,8 @@ defineProps({
     ></span>
     <span
       :class="{ 'text-white': filled }"
-      class="relative dark:text-white transition duration-300 group-hover:text-white ease"
-      >{{ msg }}</span
+      class="relative dark:text-white transition duration-300 group-hover:text-white ease flex flex-row gap-3 group"
+      >{{ msg }} <span v-if="icon" class="fill-white group-hover:animate-bounce" v-html="$icon(icon)"></span></span
     >
   </a>
 </template>

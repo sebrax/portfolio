@@ -1,14 +1,15 @@
 <template>
     <footer id="contact" class="grid grid-cols-1 gap-10 relative mt-20">
         <section class="p-10 relative">
-            <h2 class="text-5xl font-bold">vamos conversar?</h2>
+            <h2 class="text-5xl font-bold">{{ $t('lets_talk') }}</h2>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10">
-                <div class="dark:bg-white/10 bg-indigo-800/20 rounded-md p-10">
-                    <p class="text-lg">Entre em contato comigo através do email:</p>
+                <div class="dark:bg-white/10 bg-indigo-800/20 rounded-md p-10 flex flex-col items-start">
+                    <p class="text-lg">{{ $t('contact') }}</p>
                     <a :href="encodedMail" class="text-lg font-bold hover:text-indigo-500 hover:underline">sulivan.braga@outlook.com</a>
+                    <CtaButton class="mt-5" :msg="$t('download_cv')" :filled="true" :url="cv_url" :external="true" icon="download" />
                 </div>
                 <div class="dark:bg-white/10 bg-indigo-800/20 rounded-md p-10 lg:col-start-2 space-y-3">
-                    <p class="text-lg">Ou através das redes sociais:</p>
+                    <p class="text-lg">{{ $t('social') }}</p>
                     <div class="flex gap-3 social-icons">
                         <a href="https://www.linkedin.com/in/sulivanbraga/" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
@@ -61,8 +62,6 @@
             </g>
         </svg>
 
-        <!-- <img src="/looking.svg" class="max-w-72 mx-auto absolute bottom-2 right-10 z-10" alt="Ilustração de uma pessoa olhando para cima" /> -->
-
         <div class="pt-10 lg:pt-3 py-3 px-6 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-center relative">
             <p class="text-sm">{{ year + ' | ' + $t('site_title') }}</p>
         </div>
@@ -70,6 +69,15 @@
 </template>
 
 <script setup>
+import { computed } from 'vue';
+import CtaButton from './CtaButton.vue'
+import { useTranslation } from 'i18next-vue'
+
+const cv_url = computed(() => {
+    const cvLanguage = useTranslation().i18next.resolvedLanguage !== 'pt-BR' ? 'EN' : 'PT_BR'
+    return `/CV-${cvLanguage}-SULIVAN-BRAGA.pdf`
+})
+
 const encodedMail = '&#109;a&#105;l&#116;&#111;:&#115;&#117;&#108;&#105;&#118;&#97;&#110;&#46;&#98;&#114;&#97;&#103;&#97;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;'
 const year = new Date().getFullYear()
 </script>
