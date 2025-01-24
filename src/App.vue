@@ -16,8 +16,8 @@
     class="bg-neutral-50 dark:bg-neutral-900 dark:text-gray-50 space-y-20">
     <div class="z-10 relative">
       <AppHeader />
-      <SectionSkills />
       <SectionAboutMe />
+      <SectionSkills />
       <SectionProjects />
       <AppFooter />
     </div>
