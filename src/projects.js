@@ -5,6 +5,7 @@ export const projects = [
     thumbnail: 'tuzzy.jpg',
     url: 'https://tuzzy.gg',
     categories: ['Institucional', 'E-Commerce'],
+    technology: 'Wordpress',
   },
   {
     slug: 'metoobrasil',
@@ -12,6 +13,7 @@ export const projects = [
     thumbnail: 'metoobrasil.jpg',
     url: 'https://metoobrasil.org.br',
     categories: ['Institucional', 'Blog'],
+    technology: 'Laravel + Livewire',
   },
   {
     slug: 'rsdespachante',
@@ -19,6 +21,7 @@ export const projects = [
     thumbnail: 'rsdespachante.jpg',
     url: 'https://rsdespachante.com.br',
     categories: ['App Web', 'Institucional', 'Blog', 'Sistema interno'],
+    technology: 'Codeigniter + Vue.js'
   },
   {
     slug: 'moldarinteriores',
@@ -26,6 +29,7 @@ export const projects = [
     thumbnail: 'moldarinteriores.jpg',
     url: 'https://moldarinteriores.com.br',
     categories: ['Portifolio'],
+    technology: 'Nuxt.js'
   },
   {
     slug: 'madeibra',
@@ -33,6 +37,7 @@ export const projects = [
     thumbnail: 'madeibra.jpg',
     url: 'https://madeibra.com.br',
     categories: ['Institucional', 'Portifolio', 'E-Commerce'],
+    technology: 'Wordpress'
   },
   {
     slug: 'jwnews',
@@ -40,6 +45,7 @@ export const projects = [
     thumbnail: 'jwnews.jpg',
     url: 'https://jwnews.com.br',
     categories: ['Jornal', 'Blog'],
+    technology: 'Wordpress'
   },
   {
     slug: 'incentivesp',
@@ -47,5 +53,6 @@ export const projects = [
     thumbnail: 'incentive.jpg',
     url: 'https://incentive.esp.br',
     categories: ['App Web', 'Rede Social'],
+    technology: 'Laravel + Vue.js'
   },
 ]

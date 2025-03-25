@@ -14,7 +14,8 @@
                             >
                             <h4 class="mt-5 font-bold text-sm md:text-xl">{{ project.name }}</h4>
                             <div class="space-x-1">
-                                <span v-for="category in project.categories" :key="category" class="px-2 py-1 rounded-sm bg-indigo-600 text-xs text-white leading-none group-hover:bg-neutral-800">{{ category }}</span>
+                                <span class="bg-white text-black leading-none px-2 py-1 rounded-sm text-xs inline-block whitespace-nowrap">{{ project.technology }}</span>
+                                <span v-for="category in project.categories" :key="category" class="px-2 py-1 rounded-sm bg-indigo-600 text-xs text-white leading-none group-hover:bg-neutral-800 whitespace-nowrap inline-block">{{ category }}</span>
                             </div>
                         </article>
                     </a>
