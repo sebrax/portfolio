@@ -55,4 +55,12 @@ export const projects = [
     categories: ['App Web', 'Rede Social'],
     technology: 'Laravel + Vue.js'
   },
+  {
+    slug: 'alesilvapsi',
+    name: 'Psicóloga Alessa Silva',
+    thumbnail: 'alesilvapsi.jpg',
+    url: 'https://alesilva.vercel.app/',
+    categories: ['Institucional', 'Landing Page'],
+    technology: 'Vite + TypeScript + Vue.js'
+  },
 ]
